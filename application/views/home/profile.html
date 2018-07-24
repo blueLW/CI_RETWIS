@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="it"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>Retwis - Example Twitter clone based on the Redis Key-Value DB</title>
+<link href="/public/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="page">
+<!--引入头部文件-->
+<{include file='public/header.html'}>
+
+<h2><{$puser}></h2>
+<a href='<{$purl}>' class='button'><{$notice}></a>
+<{foreach $post as $k=>$v}>
+<div class='post'>
+	<a class='username' href='profile.html?u=<{$v['username']}>' ><{$v['username']}></a> <{$v['content']}><br/>
+	<i><{$v['time']}>前通过web发布</i>
+</div>
+<{/foreach}>
+<!--引入底部文件-->
+<{include file='public/footer.html'}>
+</div>
+</body>
+</html>

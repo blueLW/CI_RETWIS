@@ -1,0 +1,23 @@
+<!DOCTYPE>
+<html lang="it">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="refresh" content="1;url=<{$url}>">
+<title>Retwis - 基于redis数据库的仿Twitter案例</title>
+<link href="/public/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="page">
+<!--引入头部文件-->
+<{include file='public/header.html'}>
+
+<div id="error"><{$msg}><br>
+<a href="javascript:history.back()">Please return back and try again</a>
+</div>
+
+<!--引入底部文件-->
+<{include file='public/footer.html'}>
+</div>
+
+
+</body></html>

@@ -1,0 +1,20 @@
+1.在demo控制器中,展示了__construct结构函数的使用,以及在使用smarty时手动载入smarty扩展类
+  手动载入UserRedis类来连接redis
+
+2.在index方法中展示了,如何通过userredis对象获取 redis资源,并通过资源使用phpredis的方法来直接操作redis
+  同时还展示了,如何使用smartyextend扩展对象来实现 模板的加载和数据分配
+
+3. get()方法简单展示了,如何调用一个模型来进行数据库的读写操作
+
+4. 扩展说明,在 libraries 目录下面 smarty文件夹为 smarty源码,smartyextend.php为扩展类,是为了让smarty嵌入到CI中而额外
+   写的扩展类,smarty配置文件在系统配置目录congfig下 文件名为 smarty.php
+   
+   userredis.php扩展类,是为了让CI支持redis扩展而额外写的一个连接redis和获取资源的扩展类,同样redis的配置文件也是
+   在系统配置目录config下面,文件名为 redis.php 
+
+5. 可依据需求修改扩展类和配置文件
+
+6. demo中mysql数据为 库名为: ci 表名为: ci_user (在配置中已经设置过表前缀 ci_) 
+   ci_user表字段 id  username content 
+
+2018/7/3  LW

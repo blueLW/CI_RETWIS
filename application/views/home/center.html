@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Retwis - Example Twitter clone based on the Redis Key-Value DB</title>
+	<link href="/public/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="page">
+<!--引入头部-->
+<{include file='public/header.html'}>
+
+<div id="postform">
+<form method="POST" action="/home/center/post">
+<{$username}>, what you are doing?
+<br>
+<table>
+<tbody>
+	<tr>
+		<td><textarea cols="70" rows="3" name="content"></textarea></td>
+	</tr>
+	<tr>
+		<td align="right"><input type="submit" name="doit" value="Update"></td>
+	</tr>
+</tbody>
+
+</table>
+</form>
+<div id="homeinfobox">
+<{$followData['follower']}> 粉丝<br>
+<{$followData['following']}> 关注<br>
+</div>
+</div>
+<{foreach $post as $k => $v}>
+<div class='post'>
+	<a class='username' href='profile.php?u=test' ><{$v['username']}></a> <{$v['content']}><br/>
+	<i><{$v['time']|date_format:'%M'}>分钟前通过web发布</i>
+</div>
+<{/foreach}>
+<!--引入底部-->
+
+<{include file='public/footer.html'}>
+
+</div>
+</body>
+</html>
